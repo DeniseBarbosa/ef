@@ -12,10 +12,14 @@ namespace EF{
                 // context.Tags.Add(tag);
                 // context.SaveChanges();
 
+                // var tag = context.Tags.FirstOrDefault(x => x.Id == 5);
+                // tag.Nome = "Denise";
+                // tag.Slug = "Atualizado";
+                // context.Update(tag);
+                // context.SaveChanges();
+
                 var tag = context.Tags.FirstOrDefault(x => x.Id == 5);
-                tag.Nome = "Denise";
-                tag.Slug = "Atualizado";
-                context.Update(tag);
+                context.Remove(tag);
                 context.SaveChanges();
             }
         }
